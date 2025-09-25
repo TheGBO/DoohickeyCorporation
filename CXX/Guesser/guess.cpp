@@ -19,11 +19,11 @@ int main()
         srand(time(NULL));
         int randNum = (rand() % 10) + 1;
 
-        std::cout << MakeBanner("Mais um jogo de adivinhação");
-        std::cout << MakeBanner("Escolha um número de 1 a 10");
+        std::cout << MakeBanner("Yet another guessing game");
+        std::cout << MakeBanner("Pick a value from 1 to 10");
 
         std::string input;
-        std::cout << "Sua tentativa ↪ ";
+        std::cout << "Your attempt ↪ ";
         std::cin >> input;
         int intGuess;
         try
@@ -32,18 +32,18 @@ int main()
         }
         catch (...)
         {
-            std::cout << "Entrada inválida!\n";
+            std::cout << "Invalid input!\n";
         }
 
         if (intGuess == randNum)
-            std::cout << "Acertou!!!\n";
+            std::cout << "CORRECT!\n";
         else
-            std::cout << "Errou, era: " << randNum << "\n";
+            std::cout << "WRONG. It was: " << randNum << "\n";
 
         std::getline(std::cin, input);
 
 
-        std::cout << "Pressione Enter para continuar ou 'q' para sair... ";
+        std::cout << "Press 'Enter' to proceed or 'q' to leave... ";
         std::getline(std::cin, input);
 
         if (input == "q" || input == "Q")
