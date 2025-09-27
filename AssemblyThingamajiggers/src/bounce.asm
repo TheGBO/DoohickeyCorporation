@@ -63,7 +63,7 @@ frameDelay:
     pusha
     mov ah, 86h         ; bios wait function
     mov cx, 0x0001
-    mov dx, 0x86A0      ; arouidn 0.1s delay
+    mov dx, 0x86A0      ; around 0.1s delay
     int 15h
     popa
     ret

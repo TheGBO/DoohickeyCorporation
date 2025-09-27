@@ -15,10 +15,6 @@ print:
     mov bl, al; backup current character
     cmp al, 'Z' + 1 ;is al >= Z? if yes, end the program
     je finish
-    mov al, 0x0D
-    int 0x10
-    mov al, 0x0A
-    int 0x10
     mov al, bl
     jmp print ;no branching? continue to print. 
 
